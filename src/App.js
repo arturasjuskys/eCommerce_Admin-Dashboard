@@ -1,8 +1,22 @@
+import styled from "styled-components";
+import Sidebar from "./components/Sidebar";
+import Topbar from "./components/Topbar";
+
+const Container = styled.div`
+  display: flex;
+`;
+const Other = styled.div`
+  flex: 4;
+`;
 
 function App() {
   return (
-    <div className="App">
-      hello
+    <div>
+      <Topbar />
+      <Container>
+        <Sidebar />
+        <Other />
+      </Container>
     </div>
   );
 }
