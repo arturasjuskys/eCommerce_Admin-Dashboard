@@ -7,3 +7,4 @@
   * `npm i @material-ui/icons @material-ui/core`
 * Library: [Recharts](https://recharts.org/en-US/)
   * `npm i recharts`
+* Tool: Google Search[box shadow generator](https://html-css-js.com/css/generator/box-shadow/)

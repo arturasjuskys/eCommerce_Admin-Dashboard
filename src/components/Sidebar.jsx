@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import './styles.css';
 import {
   LineStyle,
   Timeline,
@@ -49,12 +50,6 @@ const SidebarListItem = styled.li`
   };
   /* styling active li */
   background-color: ${props => props.active ? css`rgb(240, 240, 255)` : 'rgb(251, 251, 255)'};
-
-  /* Tutorial: 30:38 styling icons */
-  /* .sidebarIcon{
-    margin-right: 5px;
-    font-size: 20px !important;
-  } */
 `;
 
 export default function Sidebar() {
@@ -67,17 +62,17 @@ export default function Sidebar() {
           <SidebarList>
 
             <SidebarListItem active>
-              <LineStyle />
+              <LineStyle className="sidebarIcon" />
               Home
             </SidebarListItem>
 
             <SidebarListItem>
-              <Timeline />
+              <Timeline className="sidebarIcon" />
               Analytics
             </SidebarListItem>
 
             <SidebarListItem>
-              <TrendingUp />
+              <TrendingUp className="sidebarIcon" />
               Sales
             </SidebarListItem>
 
