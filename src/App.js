@@ -7,6 +7,7 @@ import styled from "styled-components";
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
 import Home from "./pages/Home";
+import NewProduct from "./pages/NewProduct";
 import NewUser from "./pages/NewUser";
 import Product from "./pages/Product";
 import ProductList from "./pages/ProductList";
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/newUser" element={<NewUser />} />
           <Route path="/products" element={<ProductList />} />
           <Route path="/product/:productId" element={<Product />} />
+          <Route path="/newproduct" element={<NewProduct />} />
         </Routes>
       </Container>
     </Router>
