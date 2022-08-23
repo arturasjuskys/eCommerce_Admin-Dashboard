@@ -8,6 +8,7 @@ import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
 import Home from "./pages/Home";
 import NewUser from "./pages/NewUser";
+import ProductList from "./pages/ProductList";
 import User from "./pages/User";
 import UserList from './pages/UserList';
 
@@ -26,6 +27,8 @@ export default function App() {
           <Route path="/users" element={<UserList />} />
           <Route path="/user/:userId" element={<User />} />
           <Route path="/newUser" element={<NewUser />} />
+          <Route path="/products" element={<ProductList />} />
+          <Route path="/product/:productId" element={<NewUser />} />
         </Routes>
       </Container>
     </Router>
