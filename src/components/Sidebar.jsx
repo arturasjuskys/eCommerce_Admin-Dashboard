@@ -14,6 +14,7 @@ import {
   WorkOutline,
   Report,
 } from "@material-ui/icons";
+import { Link } from 'react-router-dom';
 
 const SidebarContainer = styled.div`
   flex: 1;
@@ -37,6 +38,11 @@ const SidebarTitle = styled.h3`
 const SidebarList = styled.ul`
   list-style: none;
   padding: 5px;
+  /* link selector */
+  > a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 const SidebarListItem = styled.li`
   padding: 5px;
@@ -60,93 +66,82 @@ export default function Sidebar() {
         <SidebarMenu>
           <SidebarTitle>Dashboard</SidebarTitle>
           <SidebarList>
-
-            <SidebarListItem active>
-              <LineStyle className="sidebarIcon" />
-              Home
-            </SidebarListItem>
-
+            <Link to="/">
+              <SidebarListItem active>
+                <LineStyle className="sidebarIcon" />
+                Home
+              </SidebarListItem>
+            </Link>
             <SidebarListItem>
               <Timeline className="sidebarIcon" />
               Analytics
             </SidebarListItem>
-
             <SidebarListItem>
               <TrendingUp className="sidebarIcon" />
               Sales
             </SidebarListItem>
-
           </SidebarList>
         </SidebarMenu>
 
         <SidebarMenu>
           <SidebarTitle>Quick Menu</SidebarTitle>
           <SidebarList>
-
-            <SidebarListItem>
-              <PermIdentity />
-              Users
-            </SidebarListItem>
-
-            <SidebarListItem>
-              <Storefront />
-              Products
-            </SidebarListItem>
-
+            <Link to="/users">
+              <SidebarListItem>
+                <PermIdentity />
+                Users
+              </SidebarListItem>
+            </Link>
+            <Link to="/products">
+              <SidebarListItem>
+                <Storefront />
+                Products
+              </SidebarListItem>
+            </Link>
             <SidebarListItem>
               <AttachMoney />
               Transactions
             </SidebarListItem>
-
             <SidebarListItem>
               <BarChart />
               Reports
             </SidebarListItem>
-
           </SidebarList>
         </SidebarMenu>
 
         <SidebarMenu>
           <SidebarTitle>Notifications</SidebarTitle>
           <SidebarList>
-
             <SidebarListItem>
               <MailOutline />
               Mail
             </SidebarListItem>
-
             <SidebarListItem>
               <DynamicFeed />
               Feedback
             </SidebarListItem>
-
             <SidebarListItem>
               <ChatBubbleOutline />
               Messages
             </SidebarListItem>
-
           </SidebarList>
         </SidebarMenu>
 
         <SidebarMenu>
           <SidebarTitle>Staff</SidebarTitle>
           <SidebarList>
-
             <SidebarListItem>
               <WorkOutline />
               Manage
             </SidebarListItem>
-
             <SidebarListItem>
               <Timeline />
               Analytics
             </SidebarListItem>
-
             <SidebarListItem>
               <Report />
               Reports
             </SidebarListItem>
-
           </SidebarList>
         </SidebarMenu>
 

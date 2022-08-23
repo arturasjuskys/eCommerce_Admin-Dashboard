@@ -1,5 +1,6 @@
 import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid, Publish } from "@material-ui/icons";
 import styled from "styled-components"
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   flex: 4;
@@ -139,7 +140,9 @@ export default function User() {
 
       <UserTitleContainer>
         <UserTitle>Edit User</UserTitle>
-        <UserAddButton>Create</UserAddButton>
+        <Link to="/newUser">
+          <UserAddButton>Create</UserAddButton>
+        </Link>
       </UserTitleContainer>
 
       <UserContainer>
@@ -195,11 +198,11 @@ export default function User() {
               </UserUpdateItem>
               <UserUpdateItem>
                 <label>Email</label>
-                <UserUpdateInput type="text" placeholder="annabeck99@gmail.com"></UserUpdateInput>
+                <UserUpdateInput type="email" placeholder="annabeck99@gmail.com"></UserUpdateInput>
               </UserUpdateItem>
               <UserUpdateItem>
                 <label>Phone</label>
-                <UserUpdateInput type="text" placeholder="+1 123 456 67"></UserUpdateInput>
+                <UserUpdateInput type="number" placeholder="+1 123 456 67"></UserUpdateInput>
               </UserUpdateItem>
               <UserUpdateItem>
                 <label>Address</label>
