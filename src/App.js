@@ -8,6 +8,7 @@ import styled from "styled-components";
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
 import Home from "./pages/Home";
+import User from "./pages/User";
 import UserList from './pages/UserList';
 
 const Container = styled.div`
@@ -23,6 +24,7 @@ export default function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/users" element={<UserList />} />
+          <Route path="/user/:userId" element={<User />} />
         </Routes>
       </Container>
     </Router>
