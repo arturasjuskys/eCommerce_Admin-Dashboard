@@ -19,7 +19,6 @@ const ChartTitle = styled.h3`
 `;
 
 export default function Chart({ title, data, dataKey, grid }) {
-  console.log(data);
   return (
     <Container>
       <ChartTitle>{title}</ChartTitle>
