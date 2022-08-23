@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
-import './styles.css';
+// import './styles.css';
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
 import { userRows } from "../dummyData";
@@ -28,6 +28,12 @@ const UserListEdit = styled.button`
   color: white;
   cursor: pointer;
   margin-right: 20px;
+`;
+const ActionCell = styled.div`
+  .userListDelete {
+    color: red;
+    cursor: pointer;
+  }
 `;
 
 export default function UserList() {
@@ -70,7 +76,7 @@ export default function UserList() {
       width: 150,
       renderCell: (params) => {
         return (
-          <>
+          <ActionCell>
             <Link to={"/user/" + params.row.id}>
               <UserListEdit>Edit</UserListEdit>
             </Link>
@@ -78,7 +84,7 @@ export default function UserList() {
               className="userListDelete"
               onClick={() => handleDelete(params.row.id)}
             />
-          </>
+          </ActionCell>
         );
       },
     },
